@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- web icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="./src/bootstrap.min.css" />
+    <link rel="stylesheet" href="./src/index.css" />
+    <!-- web title -->
+    <title>Frontend Mentor | Todo app</title>
+    <style>
+      .attribution {
+        font-size: 0.8rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body data-bs-theme="dark">
+    <main class="d-flex justify-content-center">
+      <div id="app" class="py-5">
+        <section
+          id="head"
+          class="d-flex justify-content-between align-items-center"
+        >
+          <h1 id="app-name" class="text-uppercase mb-0">Todo</h1>
+          <button id="theme-toogle"></button>
+        </section>
+        <section id="create-task" class="py-4">
+          <form>
+            <div class="form-group p-3 d-flex align-items-center rounded">
+              <span id="pending-task"></span>
+              <input
+                id="task-input"
+                type="text"
+                placeholder="Create a new todo..."
+                class="form-control border-0 w-100"
+              />
+            </div>
+          </form>
+        </section>
+        <ul class="list-group">
+          <div id="tasks" class="list-group"></div>
+          <li
+            id="states"
+            class="list-group-item position-relative p-3 d-flex justify-content-between align-items-center"
+          >
+            <span id="not-completed">3 items left</span>
+            <div class="task-state rounded d-flex gap-3">
+              <span data-show="all" id="all-tasks" class="state active-state"
+                >All</span
+              >
+              <span data-show="undone" id="pending-tasks" class="state"
+                >Active</span
+              >
+              <span data-show="done" id="completed-tasks" class="state"
+                >Completed</span
+              >
+            </div>
+            <button id="clear-completed">Clear Completed</button>
+          </li>
+        </ul>
+        <h6 class="text-center pt-5" id="msg">Drag and drop to reorder list</h6>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/Ed-Mo1" target="_blank"
+          >Eyad Muhammad</a
+        >.
+      </div>
+    </footer>
+    <script src="./src/bootstrap.min.js"></script>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
